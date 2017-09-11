@@ -5,11 +5,15 @@ package com.workspace.mvpexample.screen.login;
  */
 
 public interface LoginContract {
-    interface Presenter{
+    interface View {
+        void onSuccess();
+
+        void onError();
+    }
+
+    interface Presenter {
         void handlingLogin(String userName, String password);
     }
-    interface LoginView{
-        void onSuccess();
-        void  onError();
-    }
+
+
 }
